@@ -66,6 +66,9 @@ public class JdbcConfig {
     @Value("${minIdle}")
     private int minIdle;
 
+    @Value("${maxIdle}")
+    private int maxIdle;
+
     @Value("${logAbandoned}")
     private boolean logAbandoned;
 
@@ -103,6 +106,7 @@ public class JdbcConfig {
         p.setRemoveAbandonedTimeout(removeAbandonedTimeout);
         p.setMinEvictableIdleTimeMillis(minEvictableIdleTimeMillis);
         p.setMinIdle(minIdle);
+        p.setMaxIdle(maxIdle);
         p.setLogAbandoned(logAbandoned);
         p.setRemoveAbandoned(removeAbandoned);
         p.setJdbcInterceptors(jdbcInterceptors);
