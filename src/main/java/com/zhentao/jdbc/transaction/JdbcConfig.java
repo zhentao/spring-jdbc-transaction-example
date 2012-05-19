@@ -128,4 +128,8 @@ public class JdbcConfig {
         return dao;
     }
 
+    @Bean
+    public MyDaoRunner runner() {
+        return new MyDaoRunner();
+    }
 }
