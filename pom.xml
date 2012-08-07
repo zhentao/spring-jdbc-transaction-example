@@ -33,7 +33,7 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>${artifactId}-${version}-r${buildNumber}</finalName>
+    <finalName>${project.artifactId}-${project.version}-r${buildNumber}</finalName>
     <plugins>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
@@ -48,8 +48,9 @@
           </execution>
         </executions>
         <configuration>
-          <!-- <doCheck>true</doCheck> <doUpdate>true</doUpdate> -->
-          <shortRevisionLength>5</shortRevisionLength>
+          <doCheck>true</doCheck>
+          <doUpdate>true</doUpdate>
+          <shortRevisionLength>6</shortRevisionLength>
         </configuration>
       </plugin>
       <plugin>
@@ -64,7 +65,5 @@
       </plugin>
     </plugins>
   </build>
-
-
 
 </project>
